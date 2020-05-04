@@ -6,7 +6,8 @@ def contar_celdas_ocupadas():
     contador = 0
     for fila in mi_carton:
         for celda in fila:
-            contador += celda
+            if celda > 0:
+                contador += 1
     return contador
 
 # Guarda la cantidad de celdas ocupadas
