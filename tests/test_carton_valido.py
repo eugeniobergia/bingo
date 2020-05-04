@@ -26,7 +26,6 @@ def test_sin_colums_vacias():
     for i in range(9):
         if not(mi_carton[0][i] or mi_carton[1][i] or mi_carton[2][i]):
             assert False
-    assert True
 
 # Verifica que no haya filas vacias
 def test_sin_filas_vacias():
@@ -37,4 +36,3 @@ def test_sin_filas_vacias():
             sum += celda
         if sum == 0:
             assert False
-    assert True
