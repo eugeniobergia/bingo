@@ -79,3 +79,17 @@ def mayores_abajo(mi_carton):
                 if mi_carton[1][columna] > mi_carton[2][columna]:
                     return False
     return True
+
+# Retorna True si no hay numeros repetido, False en caso contrario
+def sin_numeros_repeditos(mi_carton):
+    for fila in mi_carton:
+        for celda in fila:
+            if celda != 0:
+                aux = 0
+                for fila2 in mi_carton:
+                    for celda2 in fila2:
+                        if celda == celda2:
+                            aux += 1
+                if aux > 1:
+                    return False
+    return True
