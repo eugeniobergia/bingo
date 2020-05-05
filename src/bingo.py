@@ -23,8 +23,8 @@ def contar_celdas_ocupadas(mi_carton):
 
 # Retorna True si no hay columnas vacias, False en caso contrario
 def sin_colums_vacias(mi_carton):
-    for i in range(9):
-        if not(mi_carton[0][i] or mi_carton[1][i] or mi_carton[2][i]):
+    for columna in range(9):
+        if not(mi_carton[0][columna] or mi_carton[1][columna] or mi_carton[2][columna]):
             return False
     return True
 
@@ -44,4 +44,21 @@ def celdas_ocupadas_1_a_90(mi_carton):
         for celda in fila:
             if not(celda >= 0 and celda <= 90):
                 return False
+    return True
+
+# Retorna True si todos los numeros van de menor a mayor horizontalmente, False en caso contrario
+def mayores_a_la_derecha(mi_carton):
+    for fila in range(3):
+        for columna in range(9):
+            if mi_carton[fila][columna] != 0:
+                for i in range(columna + 1, 9):
+                    if mi_carton[0][i] != 0:
+                        if mi_carton[0][i] < mi_carton[fila][columna]:
+                            return False
+                    if mi_carton[1][i] != 0:
+                        if mi_carton[1][i] < mi_carton[fila][columna]:
+                            return False
+                    if mi_carton[2][i] != 0:
+                        if mi_carton[2][i] < mi_carton[fila][columna]:
+                            return False
     return True
