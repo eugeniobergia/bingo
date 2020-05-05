@@ -37,3 +37,11 @@ def sin_filas_vacias(mi_carton):
         if sum == 0:
             return False
     return True
+
+# Retorna True si las celdas ocupadas se encuentran entre 1 y 90, False en caso contrario
+def celdas_ocupadas_1_a_90(mi_carton):
+    for fila in mi_carton:
+        for celda in fila:
+            if not(celda >= 0 and celda <= 90):
+                return False
+    return True
