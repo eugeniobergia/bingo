@@ -1,17 +1,10 @@
-from src.bingo import carton
+from src import bingo
 
-# Cuenta la cantidad de celdas ocupadas, funcion axuiliar para los tests
-def contar_celdas_ocupadas():
-    mi_carton = carton()
-    contador = 0
-    for fila in mi_carton:
-        for celda in fila:
-            if celda > 0:
-                contador += 1
-    return contador
+# Genera el carton
+mi_carton = bingo.carton()
 
 # Guarda la cantidad de celdas ocupadas
-cant_celdas_ocupadas = contar_celdas_ocupadas()
+cant_celdas_ocupadas = bingo.contar_celdas_ocupadas(mi_carton)
 
 # Verifica que la cantidad de celdas ocupadas no sea menor a 15
 def test_no_menos_de_15():
@@ -23,17 +16,8 @@ def test_no_mas_de_15():
 
 # Verifica que no haya columnas vacias
 def test_sin_colums_vacias():
-    mi_carton = carton()
-    for i in range(9):
-        if not(mi_carton[0][i] or mi_carton[1][i] or mi_carton[2][i]):
-            assert False
+    assert bingo.sin_colums_vacias(mi_carton)
 
 # Verifica que no haya filas vacias
 def test_sin_filas_vacias():
-    mi_carton = carton()
-    for fila in mi_carton:
-        sum = 0
-        for celda in fila:
-            sum += celda
-        if sum == 0:
-            assert False
+    assert bingo.sin_filas_vacias(mi_carton)

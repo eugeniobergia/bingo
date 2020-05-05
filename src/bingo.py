@@ -11,3 +11,29 @@ def carton():
         (0,17,29,0,47,0,67,0,88)
     )
     return carton
+
+# Cuenta la cantidad de celdas ocupadas
+def contar_celdas_ocupadas(mi_carton):
+    contador = 0
+    for fila in mi_carton:
+        for celda in fila:
+            if celda > 0:
+                contador += 1
+    return contador
+
+# Retorna True si no hay columnas vacias, False en caso contrario
+def sin_colums_vacias(mi_carton):
+    for i in range(9):
+        if not(mi_carton[0][i] or mi_carton[1][i] or mi_carton[2][i]):
+            return False
+    return True
+
+# Retorna True si no hay filas vacias, False en caso contrario
+def sin_filas_vacias(mi_carton):
+    for fila in mi_carton:
+        sum = 0
+        for celda in fila:
+            sum += celda
+        if sum == 0:
+            return False
+    return True
