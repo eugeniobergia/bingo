@@ -62,3 +62,20 @@ def mayores_a_la_derecha(mi_carton):
                         if mi_carton[2][i] < mi_carton[fila][columna]:
                             return False
     return True
+
+# Retorna True si todos los numeros van de menor a mayor verticalmente en una columna, False en caso contrario
+def mayores_abajo(mi_carton):
+    for columna in range(9):
+        if mi_carton[0][columna] != 0:
+            if mi_carton[1][columna] != 0:
+                if mi_carton[0][columna] > mi_carton[1][columna]:
+                    return False
+            if mi_carton[2][columna] != 0:
+                if mi_carton[0][columna] > mi_carton[2][columna]:
+                    return False
+
+        if mi_carton[1][columna] != 0:
+            if mi_carton[2][columna] != 0:
+                if mi_carton[1][columna] > mi_carton[2][columna]:
+                    return False
+    return True
