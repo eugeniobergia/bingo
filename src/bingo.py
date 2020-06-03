@@ -128,3 +128,15 @@ def sin_3_celdas_vacias_consecutivas(mi_carton):
             if contador == 3:
                 return False
     return True
+
+def cant_colums_con_1_celda_ocupada(mi_carton):
+    contador = 0
+    for columna in range(9):
+        contador2 = 0
+        for fila in range(3):
+            if mi_carton[fila][columna] != 0:
+                contador2 += 1
+        if contador2 == 1:
+            contador += 1
+
+    return contador

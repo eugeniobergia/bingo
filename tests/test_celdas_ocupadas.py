@@ -39,3 +39,7 @@ def test_sin_3_celdas_ocupadas_consecutivas():
 # Verifica que no haya filas con 3 celdas vacias consecutivas
 def test_sin_3_celdas_vacias_consecutivas():
     assert bingo.sin_3_celdas_vacias_consecutivas(mi_carton)
+
+# Verifica que solo haya 3 columnas son solo una columna ocupada
+def test_3_colums_con_1_celda_ocupada():
+    assert bingo.cant_colums_con_1_celda_ocupada(mi_carton) == 3
