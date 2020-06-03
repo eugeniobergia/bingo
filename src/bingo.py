@@ -56,19 +56,17 @@ def celdas_ocupadas_1_a_90(mi_carton):
 
 # Retorna True si todos los numeros van de menor a mayor horizontalmente, False en caso contrario
 def mayores_a_la_derecha(mi_carton):
-    for fila in range(3):
-        for columna in range(9):
-            if mi_carton[fila][columna] != 0:
-                for i in range(columna + 1, 9):
-                    if mi_carton[0][i] != 0:
-                        if mi_carton[0][i] < mi_carton[fila][columna]:
-                            return False
-                    if mi_carton[1][i] != 0:
-                        if mi_carton[1][i] < mi_carton[fila][columna]:
-                            return False
-                    if mi_carton[2][i] != 0:
-                        if mi_carton[2][i] < mi_carton[fila][columna]:
-                            return False
+    for columna in range(8):
+        ma = max(mi_carton[0][columna], mi_carton[1][columna], mi_carton[2][columna])
+
+        l = []
+        for fila in range(3):
+            if mi_carton[fila][columna + 1] != 0:
+                l.append(mi_carton[fila][columna + 1])
+        mi = min(l)
+
+        if ma > mi:
+            return False
     return True
 
 # Retorna True si todos los numeros van de menor a mayor verticalmente en una columna, False en caso contrario
