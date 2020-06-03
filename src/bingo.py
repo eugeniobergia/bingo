@@ -106,3 +106,15 @@ def sin_colums_llenas(mi_carton):
         if mi_carton[0][columna] and mi_carton[1][columna] and mi_carton[2][columna]:
             return False
     return True
+
+def sin_3_celdas_ocupadas_consecutivas(mi_carton):
+    for fila in mi_carton:
+        contador = 0
+        for celda in fila:
+            if celda == 0:
+                contador = 0
+            else:
+                contador += 1
+            if contador == 3:
+                return False
+    return True
