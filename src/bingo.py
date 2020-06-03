@@ -21,6 +21,14 @@ def contar_celdas_ocupadas(mi_carton):
                 contador += 1
     return contador
 
+# Cuenta la cantidad de celdas ocupadas en una fila
+def contar_celdas_ocupadas_en_fila(mi_fila):
+    contador = 0
+    for celda in mi_fila:
+        if celda > 0:
+            contador += 1
+    return contador
+
 # Retorna True si no hay columnas vacias, False en caso contrario
 def sin_colums_vacias(mi_carton):
     for columna in range(9):
