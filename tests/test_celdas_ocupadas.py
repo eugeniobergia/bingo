@@ -16,9 +16,9 @@ def test_no_mas_de_15():
 
 # Verifica que la cantidad de celdas ocupadas por fila sea exactamente 5
 def test_5_ocupadas_por_fila():
-    assert bingo.contar_celdas_ocupadas_en_fila(mi_carton[0])
-    assert bingo.contar_celdas_ocupadas_en_fila(mi_carton[1])
-    assert bingo.contar_celdas_ocupadas_en_fila(mi_carton[2])
+    assert bingo.contar_celdas_ocupadas_en_fila(mi_carton[0]) == 5
+    assert bingo.contar_celdas_ocupadas_en_fila(mi_carton[1]) == 5
+    assert bingo.contar_celdas_ocupadas_en_fila(mi_carton[2]) == 5
 
 # Verifica que no haya columnas vacias
 def test_sin_colums_vacias():
