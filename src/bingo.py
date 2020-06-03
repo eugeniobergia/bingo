@@ -118,3 +118,15 @@ def sin_3_celdas_ocupadas_consecutivas(mi_carton):
             if contador == 3:
                 return False
     return True
+
+def sin_3_celdas_vacias_consecutivas(mi_carton):
+    for fila in mi_carton:
+        contador = 0
+        for celda in fila:
+            if celda != 0:
+                contador = 0
+            else:
+                contador += 1
+            if contador == 3:
+                return False
+    return True
