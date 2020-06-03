@@ -100,3 +100,9 @@ def sin_numeros_repeditos(mi_carton):
         return False
 
     return True
+
+def sin_colums_llenas(mi_carton):
+    for columna in range(9):
+        if mi_carton[0][columna] and mi_carton[1][columna] and mi_carton[2][columna]:
+            return False
+    return True

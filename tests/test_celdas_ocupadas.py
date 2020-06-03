@@ -27,3 +27,7 @@ def test_sin_colums_vacias():
 # Verifica que no haya filas vacias
 def test_sin_filas_vacias():
     assert bingo.sin_filas_vacias(mi_carton)
+
+# Verifica que no haya columnas llenas
+def test_sin_colums_llenas():
+    assert bingo.sin_colums_llenas(mi_carton)
