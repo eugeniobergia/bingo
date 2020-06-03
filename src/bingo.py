@@ -1,16 +1,5 @@
-def carton():
-    #carton = (
-    #    (1,0,0,1,1,0,1,0,1),
-    #    (0,1,1,1,0,1,1,1,1),
-    #    (0,1,0,0,1,0,0,1,0)
-    #)
-
-    carton = (
-        (0,11,0,32,44,0,62,73,0),
-        (8,0,25,38,0,56,0,0,80),
-        (0,17,29,0,47,0,67,0,88)
-    )
-    return carton
+import random
+import math
 
 # Cuenta la cantidad de celdas ocupadas
 def contar_celdas_ocupadas(mi_carton):
@@ -140,3 +129,61 @@ def cant_colums_con_1_celda_ocupada(mi_carton):
             contador += 1
 
     return contador
+
+def generar_carton():
+    contador = 0
+
+    carton = [
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0]
+    ]
+    numerosCarton = 0
+
+    while numerosCarton < 15:
+        contador += 1
+        if contador == 50 :
+            return generar_carton()
+        numero = random.randint(1, 90)
+
+        columna = math.floor(numero / 10)
+        if columna == 9:
+            columna = 8
+        huecos = 0
+        for i in range(3):
+            if carton[i][columna] == 0:
+                huecos += 1
+            if carton[i][columna] == numero:
+                huecos = 0
+                break
+        if(huecos < 2):
+            continue
+
+        fila = 0
+        for j in range(3):
+            huecos = 0
+            for i in range(9):
+                if carton[fila][i] == 0:
+                    huecos += 1
+            if huecos < 5 or carton[fila][columna] != 0:
+                fila += 1
+            else:
+                break
+        if fila == 3:
+            continue
+
+        carton[fila][columna] = numero
+        numerosCarton += 1
+        contador = 0
+
+    for x in range(9):
+        huecos = 0
+        for y in range(3):
+            if carton[y][x] == 0:
+                huecos += 1
+        if huecos == 3:
+            return generar_carton()
+
+    return carton
+
+print(generar_carton())
