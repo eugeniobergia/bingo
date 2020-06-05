@@ -45,17 +45,17 @@ def celdas_ocupadas_1_a_90(mi_carton):
 
 # Retorna True si todos los numeros van de menor a mayor horizontalmente, False en caso contrario
 def mayores_a_la_derecha(mi_carton):
-    for columna in range(8):
-        ma = max(mi_carton[0][columna], mi_carton[1][columna], mi_carton[2][columna])
-
-        l = []
+    x = 0
+    y = 9
+    for columna in range(9):
         for fila in range(3):
-            if mi_carton[fila][columna + 1] != 0:
-                l.append(mi_carton[fila][columna + 1])
-        mi = min(l)
-
-        if ma > mi:
-            return False
+            if mi_carton[fila][columna] != 0:
+                if not(x <= mi_carton[fila][columna] <= y):
+                    return False
+        x += 10
+        y += 10
+        if y == 89:
+            y = 90
     return True
 
 # Retorna True si todos los numeros van de menor a mayor verticalmente en una columna, False en caso contrario
@@ -77,13 +77,9 @@ def mayores_abajo(mi_carton):
 
 # Retorna True si no hay numeros repetido, False en caso contrario
 def sin_numeros_repeditos(mi_carton):
-    aux = []
-    for fila in mi_carton:
-        for celda in fila:
-            if celda != 0:
-                aux.append(celda)
+    aux = mi_carton[0] + mi_carton[1] + mi_carton[2]
 
-    if len(aux) != len(set(aux)):
+    if len(set(aux)) != 16:
         return False
 
     return True
