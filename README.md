@@ -32,3 +32,11 @@ python src/bingo.py
 Nota: para distribuciones basadas en Debian utilizar `python3`
 
 Para más información sobre cómo instalar o actualizar Python visite https://www.python.org/
+
+## Ejemplo de salida
+```
+$ python3 src/bingo.py
+[0, 0, 20, 0, 47, 57, 0, 71, 89]
+[0, 11, 26, 0, 49, 0, 0, 72, 90]
+[9, 17, 0, 32, 0, 59, 63, 0, 0]
+```
