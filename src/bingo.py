@@ -199,3 +199,6 @@ while True:
     and sin_3_celdas_vacias_consecutivas(carton)
     and cant_colums_con_1_celda_ocupada(carton) == 3):
         break
+
+for fila in carton:
+    print(fila)
