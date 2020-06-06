@@ -4,7 +4,7 @@ from src import bingo
 mi_carton = [
     [0,3,0,5,5,5,0,4,91],
     [1,2,0,0,0,0,0,0,0],
-    [0,1,0,0,0,0,0,0,0]
+    [0,0,0,0,0,0,0,0,0]
 ]
 
 # Guarda la cantidad de celdas ocupadas
