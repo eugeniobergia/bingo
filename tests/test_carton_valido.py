@@ -44,14 +44,18 @@ def test_sin_3_celdas_vacias_consecutivas():
 def test_3_colums_con_1_celda_ocupada():
     assert bingo.cant_colums_con_1_celda_ocupada(mi_carton) == 3
 
+# Verifica que las celdas ocupadas esten en el rango de 1 a 90
 def test_celdas_ocupadas_1_a_90():
     assert bingo.celdas_ocupadas_1_a_90(mi_carton)
 
+# Verifica que las celdas por columnas esten en rangos crecientes de 10 en 10
 def test_mayores_a_la_derecha():
     assert bingo.mayores_a_la_derecha(mi_carton)
 
+# Verifica que las celdas de las vayan creciendo de valor para abajo
 def test_mayores_abajo():
     assert bingo.mayores_abajo(mi_carton)
 
+# Verifica que no haya numeros repetidos en el carton
 def test_sin_numeros_repeditos():
     assert bingo.sin_numeros_repeditos(mi_carton)
