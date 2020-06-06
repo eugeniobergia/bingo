@@ -1,9 +1,7 @@
 language: python
 
 install:
-    pip install pytest
-    pip install pytest-cov
-    pip install coveralls
+    pip install pytest pytest-cov coveralls
 
 script: pytest --cov=src/
 
