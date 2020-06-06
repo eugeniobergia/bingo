@@ -52,7 +52,7 @@ def test_celdas_ocupadas_1_a_90():
 def test_mayores_a_la_derecha():
     assert bingo.mayores_a_la_derecha(mi_carton)
 
-# Verifica que las celdas de las vayan creciendo de valor para abajo
+# Verifica que las celdas de las columnas vayan creciendo de valor para abajo
 def test_mayores_abajo():
     assert bingo.mayores_abajo(mi_carton)
 
