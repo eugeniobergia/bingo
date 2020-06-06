@@ -20,13 +20,13 @@ def test_5_ocupadas_por_fila():
     and bingo.contar_celdas_ocupadas_en_fila(mi_carton[1]) != 5
     and bingo.contar_celdas_ocupadas_en_fila(mi_carton[2]) != 5)
 
-# Verifica que haya columnas y filas vacias
-def test_sin_colums_o_filas_vacias():
-    assert not(bingo.sin_colums_vacias(mi_carton) and bingo.sin_filas_vacias(mi_carton))
+# Verifica que haya columnas
+def test_sin_colums_vacias():
+    assert not(bingo.sin_colums_vacias(mi_carton))
 
-# Verifica que haya columnas llenas
-def test_sin_colums_llenas():
-    assert not(bingo.sin_colums_llenas(mi_carton))
+# Verifica que haya columnas llenas o filas vacias
+def test_sin_colums_llenas_o_filas_vacias():
+    assert not(bingo.sin_colums_llenas(mi_carton) and bingo.sin_filas_vacias(mi_carton))
 
 # Verifica que haya filas con 3 celdas ocupadas consecutivas
 def test_sin_3_celdas_ocupadas_consecutivas():
