@@ -126,7 +126,7 @@ def cant_colums_con_1_celda_ocupada(mi_carton):
 
     return contador
 
-def generar_carton():
+def intento_carton():
     contador = 0
 
     carton = [
@@ -139,7 +139,7 @@ def generar_carton():
     while numerosCarton < 15:
         contador += 1
         if contador == 50 :
-            return generar_carton()
+            return intento_carton()
         numero = random.randint(1, 90)
 
         columna = math.floor(numero / 10)
@@ -178,27 +178,30 @@ def generar_carton():
             if carton[y][x] == 0:
                 huecos += 1
         if huecos == 3:
-            return generar_carton()
+            return intento_carton()
 
     return carton
 
-while True:
-    carton = generar_carton()
-    if(contar_celdas_ocupadas(carton) == 15
-    and contar_celdas_ocupadas_en_fila(carton[0]) == 5
-    and contar_celdas_ocupadas_en_fila(carton[1]) == 5
-    and contar_celdas_ocupadas_en_fila(carton[2]) == 5
-    and sin_colums_vacias(carton)
-    and sin_filas_vacias(carton)
-    and celdas_ocupadas_1_a_90(carton)
-    and mayores_a_la_derecha(carton)
-    and mayores_abajo(carton)
-    and sin_numeros_repeditos(carton)
-    and sin_colums_llenas(carton)
-    and sin_3_celdas_ocupadas_consecutivas(carton)
-    and sin_3_celdas_vacias_consecutivas(carton)
-    and cant_colums_con_1_celda_ocupada(carton) == 3):
-        break
+def generar_carton():
+    while True:
+        carton = intento_carton()
+        if(contar_celdas_ocupadas(carton) == 15
+        and contar_celdas_ocupadas_en_fila(carton[0]) == 5
+        and contar_celdas_ocupadas_en_fila(carton[1]) == 5
+        and contar_celdas_ocupadas_en_fila(carton[2]) == 5
+        and sin_colums_vacias(carton)
+        and sin_filas_vacias(carton)
+        and celdas_ocupadas_1_a_90(carton)
+        and mayores_a_la_derecha(carton)
+        and mayores_abajo(carton)
+        and sin_numeros_repeditos(carton)
+        and sin_colums_llenas(carton)
+        and sin_3_celdas_ocupadas_consecutivas(carton)
+        and sin_3_celdas_vacias_consecutivas(carton)
+        and cant_colums_con_1_celda_ocupada(carton) == 3):
+            break
+    return carton
 
+carton = generar_carton()
 for fila in carton:
     print(fila)
