@@ -26,18 +26,28 @@ Para clonar el repositorio:
 git clone https://github.com/eugeniobergia/bingo.git
 ```
 
-Para ejecutar el código:
+Para generar un cartón por consola:
 ```
 python src/bingo.py
+```
+Para generar un html con un cartón visual:
+```
+python web/bingo_web.py
 ```
 Nota: para distribuciones basadas en Debian utilizar `python3`
 
 Para más información sobre cómo instalar o actualizar Python visite https://www.python.org/
 
 ## Ejemplo de salida
+### Consola
 ```
 $ python3 src/bingo.py
 [0, 0, 20, 0, 47, 57, 0, 71, 89]
 [0, 11, 26, 0, 49, 0, 0, 72, 90]
 [9, 17, 0, 32, 0, 59, 63, 0, 0]
 ```
+### Web
+```
+$ python3 web/bingo_web.py
+```
+![Ejemplo Bingo Web](https://github.com/eugeniobergia/bingo/blob/master/ejemplo%20bingo%20web.png?raw=true)
