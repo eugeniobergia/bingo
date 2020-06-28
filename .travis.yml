@@ -11,6 +11,7 @@ install:
 
 script:
     pytest --cov=src/
+    python src/bingo.py
 
 after_success:
     coveralls
