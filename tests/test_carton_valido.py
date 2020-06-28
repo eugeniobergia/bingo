@@ -1,7 +1,7 @@
 from src import bingo
 
 # Genera el carton
-mi_carton = bingo.carton
+mi_carton = bingo.generar_carton()
 
 # Guarda la cantidad de celdas ocupadas
 cant_celdas_ocupadas = bingo.contar_celdas_ocupadas(mi_carton)
