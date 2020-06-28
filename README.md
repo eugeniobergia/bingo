@@ -50,4 +50,4 @@ $ python3 src/bingo.py
 ```
 $ python3 web/bingo_web.py
 ```
-![Ejemplo Bingo Web](https://github.com/eugeniobergia/bingo/blob/master/ejemplo%20bingo%20web.png?raw=true)
+![Ejemplo Bingo Web](https://github.com/eugeniobergia/bingo/blob/master/imagenes/ejemplo_web.png?raw=true)
