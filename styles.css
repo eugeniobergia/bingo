@@ -1,3 +1,12 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
 .tabla {
     margin: 2em;
     display: flex;
@@ -20,10 +29,10 @@
 }
 
 .celda {
-    background: #2ecc40;
+    background: #447bce;
     color: black;
 }
 
 .vacia {
-    color: white;
+    background: #133261
 }
