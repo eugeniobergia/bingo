@@ -2,9 +2,49 @@
 <html>
 <head>
     <title>Bingo Web</title>
-    <link rel="stylesheet" type ="text/css" href ="web/styles.css">
     <meta charset="UTF-8">
 </head>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.tabla {
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.fila {
+    display: flex;
+}
+
+.fila > div {
+    border: 1px solid #001f3f;
+    width: 4em;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    text-align: center;
+}
+
+.celda {
+    background: #447bce;
+    color: black;
+}
+
+.vacia {
+    background: #133261
+}
+</style>
 
 <body>
     <div class="tabla">
