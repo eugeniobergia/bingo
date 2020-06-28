@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bingo Web</title>
+    <link rel="stylesheet" type ="text/css" href ="styles.css">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div class="tabla">
+        {% for fila in carton %}
+        <div class="fila">
+            {% for celda in fila %}
+            <div class="celda">
+                {{ celda }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
