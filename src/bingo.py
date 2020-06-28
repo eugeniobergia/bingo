@@ -202,10 +202,7 @@ def generar_carton():
             break
     return carton
 
-def main():
-    carton = generar_carton()
-    for fila in carton:
-        print(fila)
 
-if __name__ == "__main__":
-    main()
+carton = generar_carton()
+for fila in carton:
+    print(fila)
