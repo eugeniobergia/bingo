@@ -11,9 +11,15 @@
         {% for fila in carton %}
         <div class="fila">
             {% for celda in fila %}
+            {% if celda == 0 %}
+            <div class="vacia">
+                {{ celda }}
+            </div>
+            {% else %}
             <div class="celda">
                 {{ celda }}
             </div>
+            {% endif %}
             {% endfor %}
         </div>
         {% endfor %}
