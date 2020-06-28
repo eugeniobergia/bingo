@@ -126,6 +126,14 @@ def cant_colums_con_1_celda_ocupada(mi_carton):
 
     return contador
 
+def matriz_de_3x9(mi_carton):
+    if len(mi_carton) != 3:
+        return False
+    for fila in mi_carton:
+        if len(fila) != 9:
+            return False
+    return True
+
 def intento_carton():
     contador = 0
 
@@ -198,7 +206,8 @@ def generar_carton():
         and sin_colums_llenas(carton)
         and sin_3_celdas_ocupadas_consecutivas(carton)
         and sin_3_celdas_vacias_consecutivas(carton)
-        and cant_colums_con_1_celda_ocupada(carton) == 3):
+        and cant_colums_con_1_celda_ocupada(carton) == 3
+        and matriz_de_3x9(carton)):
             break
     return carton
 

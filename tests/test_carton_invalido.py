@@ -9,7 +9,7 @@ mi_carton = [
 
 mi_carton2 = [
     [0,3,0,5,5,5,0,4,91],
-    [1,2,0,0,0,0,0,0,0],
+    [1,2,0,0,0,0,0,0,0,0],
     [0,0,0,0,0,0,0,0,0]
 ]
 
@@ -65,3 +65,7 @@ def test_mayores_abajo():
 # Verifica que haya numeros repetidos en el carton
 def test_sin_numeros_repeditos():
     assert not(bingo.sin_numeros_repeditos(mi_carton))
+
+# Verifica que la matriz no sea de 3x9
+def test_matriz_de_3x9():
+    assert not(bingo.matriz_de_3x9(mi_carton2))

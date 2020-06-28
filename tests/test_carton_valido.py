@@ -59,3 +59,7 @@ def test_mayores_abajo():
 # Verifica que no haya numeros repetidos en el carton
 def test_sin_numeros_repeditos():
     assert bingo.sin_numeros_repeditos(mi_carton)
+
+# Verifica que la matriz sea de 3x9
+def test_matriz_de_3x9():
+    assert bingo.matriz_de_3x9(mi_carton)
