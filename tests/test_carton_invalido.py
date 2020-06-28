@@ -7,6 +7,12 @@ mi_carton = [
     [0,1,0,0,0,0,0,0,0]
 ]
 
+mi_carton2 = [
+    [0,3,0,5,5,5,0,4,91],
+    [1,2,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0]
+]
+
 # Guarda la cantidad de celdas ocupadas
 cant_celdas_ocupadas = bingo.contar_celdas_ocupadas(mi_carton)
 
@@ -24,9 +30,13 @@ def test_5_ocupadas_por_fila():
 def test_sin_colums_vacias():
     assert not(bingo.sin_colums_vacias(mi_carton))
 
-# Verifica que haya columnas llenas o filas vacias
-def test_sin_colums_llenas_o_filas_vacias():
-    assert not(bingo.sin_colums_llenas(mi_carton) and bingo.sin_filas_vacias(mi_carton))
+# Verifica que haya columnas llenas
+def test_sin_colums_llenas():
+    assert not(bingo.sin_colums_llenas(mi_carton))
+
+# Verifica que haya filas vacias
+def test_filas_vacias():
+    assert not(bingo.sin_filas_vacias(mi_carton2))
 
 # Verifica que haya filas con 3 celdas ocupadas consecutivas
 def test_sin_3_celdas_ocupadas_consecutivas():
