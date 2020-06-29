@@ -4,7 +4,8 @@ from src import bingo
 mi_carton = [
     [0,3,0,5,5,5,0,4,91],
     [1,2,0,0,0,0,0,0,0],
-    [0,1,0,0,0,0,0,0,0]
+    [0,1,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0]
 ]
 
 mi_carton2 = [
@@ -68,4 +69,4 @@ def test_sin_numeros_repeditos():
 
 # Verifica que la matriz no sea de 3x9
 def test_matriz_de_3x9():
-    assert not(bingo.matriz_de_3x9(mi_carton2))
+    assert not(bingo.matriz_de_3x9(mi_carton) and bingo.matriz_de_3x9(mi_carton2))
