@@ -150,7 +150,7 @@ def intento_carton():
             return intento_carton()
         numero = random.randint(1, 90)
 
-        columna = math.floor(numero / 10)
+        columna = int(math.floor(numero / 10))
         if columna == 9:
             columna = 8
         huecos = 0
@@ -210,11 +210,3 @@ def generar_carton():
         and matriz_de_3x9(carton)):
             break
     return carton
-
-def main():
-    carton = generar_carton()
-    for fila in carton:
-        print(fila)
-
-if __name__ == "__main__":
-    main()
