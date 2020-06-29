@@ -21,12 +21,18 @@ Se considara un cartón válido al que cumple con las siguientes condiciones:
 * En una fila no existen más de dos celdas vacías consecutivas.
 * En una fila no existen más de dos celdas ocupadas consecutivas.
 
-## Uso
+## Descarga
 Para clonar el repositorio:
 ```
 git clone https://github.com/eugeniobergia/bingo.git
 ```
+Para instalar `jinja2`:
+```
+pip install jinja2
+```
+Nota: para distribuciones basadas en Debian utilizar `pip3`
 
+## Uso
 Para generar un cartón por consola:
 ```
 python bingo_cli.py
