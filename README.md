@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.com/eugeniobergia/bingo.svg?branch=master)](https://travis-ci.com/eugeniobergia/bingo)
 [![Coverage Status](https://coveralls.io/repos/github/eugeniobergia/bingo/badge.svg?branch=master)](https://coveralls.io/github/eugeniobergia/bingo?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/eugeniobergia/bingo/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/eugeniobergia/bingo/?branch=master)
 # Bingo
 
 Código en Python 3 que genera un cartón de bingo.
