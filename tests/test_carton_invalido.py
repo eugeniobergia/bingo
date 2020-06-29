@@ -69,4 +69,5 @@ def test_sin_numeros_repeditos():
 
 # Verifica que la matriz no sea de 3x9
 def test_matriz_de_3x9():
-    assert not(bingo.matriz_de_3x9(mi_carton) and bingo.matriz_de_3x9(mi_carton2))
+    assert not(bingo.matriz_de_3x9(mi_carton))
+    assert not(bingo.matriz_de_3x9(mi_carton2))
